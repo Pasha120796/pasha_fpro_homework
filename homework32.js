@@ -21,3 +21,4 @@ default:
     break;
 }
 alert(`${number1}${question}${number2}=${result}`);
+
