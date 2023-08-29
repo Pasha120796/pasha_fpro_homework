@@ -1,17 +1,15 @@
-var length = parseInt(prompt("Введите длину массива:"));
+const length = parseInt(prompt("Введите длину массива:"));
 
-var array = [];
+const array = [];
 
-for (var i = 0; i < length; i++) {
-    var element = parseInt(prompt("Введите элемент массива на позиции " + i + ":"));
+for (let i = 0; i < length; i++) {
+    const element = parseInt(prompt(`Введите элемент ${i + 1}:`));
     array.push(element);
 }
+console.log("Начальный массив:", array);
 
-array.sort(function(a, b) {
-    return a - b;
-});
+array.sort((a, b) => a - b);
+console.log("Отсортированный массив:", array);
 
-array.splice(2, 3);
-
-var output = document.getElementById("output");
-output.innerHTML = "Массив после сортировки и удаления: " + array.join(", ");
+array.splice(1, 4);
+console.log("Массив после удаления элементов:", array);
