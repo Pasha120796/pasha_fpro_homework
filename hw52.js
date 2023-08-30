@@ -22,6 +22,7 @@ for (let i = 1; i < array.length; i++) {
 console.log("Минимальный элемент:", minElement);
 console.log("Индекс минимального элемента:", minIndex);
 
+
 let maxElement = array[0];
 let maxIndex = 0;
 for (let i = 1; i < array.length; i++) {
