@@ -49,7 +49,7 @@ for (const num of array) {
         oddPositiveCounts++;
     }
 }
-console.log("Количество нечетных положительных элементов:", oddPositiveCount);
+console.log("Количество нечетных положительных элементов:", oddPositiveCounts);
 
 let evenPositivePartCount = 0;
 let currentPartSign = array[0] < 0 ? -1 : 1;
