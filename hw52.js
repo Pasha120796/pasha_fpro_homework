@@ -34,19 +34,19 @@ console.log("Максимальный элемент:", maxElement);
 console.log("Индекс максимального элемента:", maxIndex);
 
 let negativePartCount = 0;
-let currentPartSign = array[0] < 0 ? -1 : 1;
+let currentPartSignes = array[0] < 0 ? -1 : 1;
 for (const num of array) {
-    if ((num < 0 && currentPartSign > 0) || (num > 0 && currentPartSign < 0)) {
+    if ((num < 0 && currentPartSignes > 0) || (num > 0 && currentPartSignes < 0)) {
         negativePartCount++;
-        currentPartSign *= -1;
+        currentPartSignes *= -1;
     }
 }
 console.log("Количество отрицательных частей:", negativePartCount);
 
-let oddPositiveCount = 0;
+let oddPositiveCounts = 0;
 for (const num of array) {
     if (num > 0 && num % 2 !== 0) {
-        oddPositiveCount++;
+        oddPositiveCounts++;
     }
 }
 console.log("Количество нечетных положительных элементов:", oddPositiveCount);
@@ -67,38 +67,38 @@ for (let i = 1; i < array.length; i++) {
 }
 console.log("Количество парных положительных частей:", evenPositivePartCount);
 
-let evenPositiveSum = 0;
+let evenPositiveSumss = 0;
 for (const num of array) {
     if (num > 0 && num % 2 === 0) {
-        evenPositiveSum += num;
+        evenPositiveSumss += num;
     }
 }
-console.log("Сумма четных положительных элементов:", evenPositiveSum);
+console.log("Сумма четных положительных элементов:", evenPositiveSumss);
 
-let oddPositiveSum = 0;
+let oddPositiveSumm = 0;
 for (const num of array) {
     if (num > 0 && num % 2 !== 0) {
-        oddPositiveSum += num;
+        oddPositiveSumm += num;
     }
 }
-console.log("Сумма нечетных положительных элементов:", oddPositiveSum);
+console.log("Сумма нечетных положительных элементов:", oddPositiveSumm);
 
-let positiveProduct = 1;
+let positiveProductts = 1;
 for (const num of array) {
     if (num > 0) {
-        positiveProduct *= num;
+        positiveProductts *= num;
     }
 }
-console.log("Произведение положительных элементов:", positiveProduct);
+console.log("Произведение положительных элементов:", positiveProductts);
 
-let maxElement = array[0];
+let maxElements = array[0];
 for (let i = 1; i < array.length; i++) {
-    if (array[i] > maxElement) {
-        maxElement = array[i];
+    if (array[i] > maxElements) {
+        maxElements = array[i];
     }
 }
 for (let i = 0; i < array.length; i++) {
-    if (array[i] !== maxElement) {
+    if (array[i] !== maxElements) {
         array[i] = 0;
     }
 }
