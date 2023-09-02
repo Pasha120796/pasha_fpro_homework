@@ -53,27 +53,16 @@ let users = [
         "phone": "+1 (837) 586-3283",
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
-]
-
-let users = [
-    // ... ваш масив об'єктів користувачів ...
 ];
 
-// Виведення масиву телефонних номерів користувачів з балансом більше 2000 доларів
-let phoneNumbersWithHighBalance = users
-    .filter(user => {
-        let balanceNumeric = parseFloat(user.balance.replace(/[^0-9.-]+/g,""));
-        return balanceNumeric > 2000;
-    })
-    .map(user => user.phone);
+// Фільтруємо користувачів з балансом більше 2000 доларів
+let filteredUsers = users.filter(user => parseFloat(user.balance.replace('$', '').replace(',', '')) > 2000);
 
-console.log("Телефонні номери користувачів з балансом більше 2000 доларів:");
-console.log(phoneNumbersWithHighBalance);
+// Виводимо телефонні номери цих користувачів
+let phoneNumbers = filteredUsers.map(user => user.phone);
 
-// Знаходження суми всіх балансів користувачів
-let totalBalance = users.reduce((sum, user) => {
-    let balanceNumeric = parseFloat(user.balance.replace(/[^0-9.-]+/g,""));
-    return sum + balanceNumeric;
-}, 0);
+// Знаходимо суму всіх балансів користувачів з балансом більше 2000 доларів
+let totalBalance = filteredUsers.reduce((acc, user) => acc + parseFloat(user.balance.replace('$', '').replace(',', '')), 0);
 
-console.log("Загальний баланс усіх користувачів:", totalBalance.toFixed(2));
+console.log("Телефонні номери користувачів з балансом більше 2000 доларів:", phoneNumbers);
+console.log("Сума всіх балансів користувачів з балансом більше 2000 доларів:", totalBalance);
