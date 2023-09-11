@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.left-block, .middle-block, .right-block {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.left-block:hover, .middle-block:hover, .right-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-block h2, .middle-block h2, .right-block h2 {
+    margin-top: 0;
+    color: #1f2d3a;
+    transition: color 0.3s ease-in-out;
+}
+
+.left-block:hover h2, .middle-block:hover h2, .right-block:hover h2 {
+    color: #d59f23;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #e5901d;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #bd761d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #303e52;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #4d351b;
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
